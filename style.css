@@ -1,0 +1,163 @@
+/*Zera as configurações padrões*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Definições do container*/
+.container{
+    display: flex; 
+    flex-direction: row;
+    height: 88vh;
+    margin: 2px;
+}
+/*definiçoes aside*/
+aside{
+    width: 20vw;
+    height: 99vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*configura degrade*/
+.box-degrade{    
+    background-image: linear-gradient(to left, #4b6cb7, #182848);
+    background-size: 500% 100%;
+    animation: degrade-animado 5s infinite alternate;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+.box-degrade *{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #ffffff;
+}
+/*efeito para itens de menu**/
+.box-degrade a{
+    -webkit-transition: .5s ease-in;
+     -moz-transition: .5s ease-in;
+     -o-transition: .5s ease-in;
+     transition: .5s ease-in
+}
+
+.box-degrade a:hover{
+    color: #182848;
+    font-size: 2em;
+    -webkit-transition: .5s ease-in;
+     -moz-transition: .5s ease-in; 
+     -o-transition: .5s ease-in;
+     transition: .5s ease-in
+}
+
+.box-degrade img{
+    width: 80%;
+    border: #ffffff solid 2px;
+    border-radius: 74% 26% 65% 35% / 31% 64% 36% 69%;
+    margin: 10px;
+    -webkit-transition: .5s ease-in;
+     -moz-transition: .5s ease-in; 
+     -o-transition: .5s ease-in;
+     transition: .5s ease-in
+}
+
+.box-degrade img:hover{
+    width: 90%;
+    border: #c8d608ec solid 2px;    
+    border-radius: 31% 64% 36% 69% / 74% 26% 65% 35%;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+.dados{
+    width: 80%;
+    padding-left: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.dados img{
+    width: 32px;    
+}
+
+.dados p{
+    margin-top: 20px;
+}
+
+.campo{
+    margin: 5px;    
+}
+
+.campo *{
+    display: inline-block;
+    text-align: center; 
+    text-decoration: none;
+    color: black;
+    padding-right: 15px;   
+}
+
+.campo h1{ 
+    font-size: 2em;   
+}
+
+#conhecimentos{
+    margin-left: 5vw;
+    text-align: start;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2em;
+}
+
+#conhecimentos h2{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#conhecimentos ol{
+    list-style-type:upper-latin
+}
+
+small{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.objetivo {
+    margin-left: 5vw;
+    text-align: start;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2em;
+}
+
+small a:hover{
+   /* box-shadow: 4px 30px 16px 0px rgba(50, 50, 50, 0.45);**/
+	animation: bounce 1s;
+}
+
+/*anima o degrade*/    
+@keyframes degrade-animado{
+    0%{
+        background-position-x: 0%;
+    }
+
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+@keyframes bounce{
+	50%{
+		transform: translateY(-10px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
